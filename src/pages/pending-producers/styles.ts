@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  background-color: #f0f;
-
-  width: 100vh;
+  width: 100%;
   height: 100vh;
+
+  background-color: #f00;
 `;
