@@ -1,7 +1,7 @@
 import React from 'react';
 
 import * as C from '../../components';
-import * as S from './styles';
+import * as S from './pending-producers-styles';
 
 const arr = [1, 2, 3, 4, 5];
 

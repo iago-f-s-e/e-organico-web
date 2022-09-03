@@ -1,6 +1,5 @@
 export declare type Fields = {
-  [key: string]: {
-    name: string;
-    value: string;
-  };
+  x_index: number;
+  name: string;
+  value: string;
 };

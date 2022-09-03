@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { componentSystem, gridSystem, fontSystem } from '../../../../styles';
+import { componentSystem, gridSystem, fontSystem, colorSystem } from '../../../../styles';
 
+// TODO: REMOVER BACKGROUND COLOR
 export const Container = styled.article`
   display: flex;
 
@@ -42,15 +43,41 @@ export const InfoContainer = styled.section`
   border: 1px solid black;
 `;
 
-export const InfoContent = styled.div``;
+export const InfoHeader = styled.div`
+  align-items: center;
+  width: ${componentSystem.percent_full};
+  height: 40%;
+  overflow: hidden;
+  border-bottom: 1px solid ${colorSystem.entity.border_light};
+`;
 
-export const InfoSection = styled.div``;
+export const InfoContent = styled.div`
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+`;
+
+export const Description = styled.div`
+  display: flex;
+  background-color: ${colorSystem.basic.silver};
+  margin-left: ${gridSystem.extra_small};
+`;
 
 export const ActionContainer = styled.section``;
 
 export const Action = styled.button``;
 
 export const Title = styled.p`
-  font-weight: ${fontSystem.weight.bold};
+  font-weight: ${fontSystem.weight.semibold};
   font-size: ${fontSystem.size.rem_medium_2};
+`;
+
+export const DescriptionContent = styled.p`
+  font-weight: ${fontSystem.weight.semibold};
+  font-size: ${fontSystem.size.rem_small};
+`;
+
+export const DescriptionLabel = styled(DescriptionContent)`
+  color: ${colorSystem.basic.grey};
+  margin-right: 2px;
 `;

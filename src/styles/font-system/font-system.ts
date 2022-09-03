@@ -1,6 +1,6 @@
 import { pxToRem } from '../px-to-rem';
 import { styleConstants } from '../styles-constants';
-import { FontWeightSystem, FontSizeSystem, FontSystem } from './types-font-system';
+import { FontWeightSystem, FontSizeSystem, FontSystem } from './font-system-types';
 
 const fontWeightSystem: FontWeightSystem = {
   extra_light: 200,
