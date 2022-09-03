@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { colorSystem } from '../color-system';
+import { fontSystem } from '../font-system';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -13,6 +14,12 @@ export const GlobalStyle = createGlobalStyle`
     color: ${colorSystem.basic.black};
     font-family: work-sans, sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: ${fontSystem.weight.medium};
+  }
+
+  button {
+    cursor: pointer;
+    user-select: none;
+    font-weight: ${fontSystem.weight.semibold};
   }
 `;

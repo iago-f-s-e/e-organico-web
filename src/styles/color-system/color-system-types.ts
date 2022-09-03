@@ -1,7 +1,8 @@
 export type MainColorSystemColorSystem = {
   primary: string;
+  primary_light: string;
+  primary_dark: string;
   secondary: string;
-  lightPrimary: string;
 };
 
 export type BasicColorSystem = {

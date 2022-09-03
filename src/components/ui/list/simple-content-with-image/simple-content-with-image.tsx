@@ -1,4 +1,5 @@
 import React from 'react';
+import { MainButton } from '../../main-button';
 
 import * as S from './simple-content-with-image-styles';
 import { ListSimpleContentWithImageProps } from './simple-content-with-image-types';
@@ -24,17 +25,14 @@ export const ListSimpleContentWithImage = (_p: ListSimpleContentWithImageProps):
               Rua Teresio morel, 1002, bloco 01, apto 107, SE
             </S.DescriptionContent>
           </S.Description>
-          <S.DescriptionContent>
-            <S.Description>Endereço: Rua Teresio</S.Description>
-          </S.DescriptionContent>
-          <S.DescriptionContent>
-            <S.Description>Endereço: Rua Teresio</S.Description>
-          </S.DescriptionContent>
-          <S.DescriptionContent>
-            <S.Description>Endereço: Rua Teresio</S.Description>
-          </S.DescriptionContent>
         </S.InfoContent>
       </S.InfoContainer>
+
+      <S.ActionContainer>
+        <S.ActionContent>
+          <MainButton onClick={() => console.log('ok')} title="Visualizar" />
+        </S.ActionContent>
+      </S.ActionContainer>
     </S.Container>
   );
 };

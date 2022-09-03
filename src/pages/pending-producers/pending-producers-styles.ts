@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { gridSystem } from '../../styles';
 
 export const Container = styled.main`
-  width: 50%;
+  width: 100%;
   height: 100vh;
 
   padding: ${gridSystem.small} ${gridSystem.medium};

@@ -9,11 +9,12 @@ import {
 const mainColorSystem: MainColorSystemColorSystem = {
   primary: '#1BE080',
   secondary: '#1A5030',
-  lightPrimary: 'rgba(123, 237, 141, 0.5)',
+  primary_light: 'rgba(123, 237, 141, 0.5)',
+  primary_dark: '#00b358',
 };
 
 const basicColorSystem: BasicColorSystem = {
-  white: '#FFFFFF',
+  white: '#FDFDFD',
   grey: '#80808F',
   black: '#121212',
   silver: '#D0D0D0',

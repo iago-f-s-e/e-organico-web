@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { componentSystem, gridSystem, fontSystem, colorSystem } from '../../../../styles';
 
-// TODO: REMOVER BACKGROUND COLOR
 export const Container = styled.article`
   display: flex;
 
@@ -9,12 +8,13 @@ export const Container = styled.article`
   justify-content: space-around;
 
   width: ${componentSystem.percent_full};
+  max-width: 50rem;
   height: ${componentSystem.rem_large_3};
 
   padding: ${gridSystem.small};
   margin: ${gridSystem.small} 0;
 
-  background: #fff;
+  background: ${colorSystem.basic.white};
 
   border: 1px solid black;
   border-radius: 5px;
@@ -36,11 +36,9 @@ export const Image = styled.img`
 `;
 
 export const InfoContainer = styled.section`
-  width: 70%;
+  width: 30rem;
   height: ${componentSystem.percent_full};
-
   overflow: hidden;
-  border: 1px solid black;
 `;
 
 export const InfoHeader = styled.div`
@@ -59,13 +57,27 @@ export const InfoContent = styled.div`
 
 export const Description = styled.div`
   display: flex;
-  background-color: ${colorSystem.basic.silver};
   margin-left: ${gridSystem.extra_small};
 `;
 
-export const ActionContainer = styled.section``;
+export const ActionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-export const Action = styled.button``;
+  width: ${componentSystem.rem_extra_large_4};
+  height: ${componentSystem.percent_full};
+
+  overflow: hidden;
+  border: 1px solid black;
+`;
+
+export const ActionContent = styled.div`
+  width: ${componentSystem.percent_full};
+  height: ${componentSystem.percent_half};
+
+  padding: ${gridSystem.extra_small} ${gridSystem.small};
+`;
 
 export const Title = styled.p`
   font-weight: ${fontSystem.weight.semibold};
