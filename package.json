@@ -6,7 +6,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "typecheck": "yarn tsc --noEmit",
+    "typewatch": "yarn tsc -w --noEmit"
   },
   "dependencies": {
     "react": "^18.2.0",

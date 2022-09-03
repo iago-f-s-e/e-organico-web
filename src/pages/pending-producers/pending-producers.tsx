@@ -10,7 +10,14 @@ export const PendingProducers = (): JSX.Element => {
     <S.Container>
       <C.Map
         data={arr}
-        render={(_, index) => <C.ListSimpleContentWithImage key={index.toString()} />}
+        render={(_, index) => (
+          <C.ListSimpleContentWithImage
+            imagePath=""
+            onClick={() => console.log('ok')}
+            title=""
+            key={index.toString()}
+          />
+        )}
       />
     </S.Container>
   );
