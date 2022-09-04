@@ -38,14 +38,12 @@ export const Image = styled.img`
 export const InfoContainer = styled.section`
   width: 30rem;
   height: ${componentSystem.percent_full};
-  overflow: hidden;
 `;
 
 export const InfoHeader = styled.div`
   align-items: center;
   width: ${componentSystem.percent_full};
   height: 40%;
-  overflow: hidden;
   border-bottom: 1px solid ${colorSystem.entity.border_light};
 `;
 
@@ -67,9 +65,6 @@ export const ActionContainer = styled.section`
 
   width: ${componentSystem.rem_extra_large_4};
   height: ${componentSystem.percent_full};
-
-  overflow: hidden;
-  border: 1px solid black;
 `;
 
 export const ActionContent = styled.div`

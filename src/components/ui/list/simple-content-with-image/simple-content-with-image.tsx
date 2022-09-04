@@ -30,7 +30,7 @@ export const ListSimpleContentWithImage = (_p: ListSimpleContentWithImageProps):
 
       <S.ActionContainer>
         <S.ActionContent>
-          <MainButton onClick={() => console.log('ok')} title="Visualizar" />
+          <MainButton onClick={() => {}} title="Visualizar" />
         </S.ActionContent>
       </S.ActionContainer>
     </S.Container>
