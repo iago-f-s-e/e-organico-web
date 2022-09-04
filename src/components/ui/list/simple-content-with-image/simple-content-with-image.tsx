@@ -1,4 +1,5 @@
 import React from 'react';
+import { If } from '../../../business';
 import { MainButton } from '../../main-button';
 
 import * as S from './simple-content-with-image-styles';
@@ -7,7 +8,9 @@ import { ListSimpleContentWithImageProps } from './simple-content-with-image-typ
 const image =
   'https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600';
 
-export const ListSimpleContentWithImage = (_p: ListSimpleContentWithImageProps): JSX.Element => {
+export const ListSimpleContentWithImage = ({
+  otherAction,
+}: ListSimpleContentWithImageProps): JSX.Element => {
   return (
     <S.Container>
       <S.ImageContainer>
@@ -32,6 +35,10 @@ export const ListSimpleContentWithImage = (_p: ListSimpleContentWithImageProps):
         <S.ActionContent>
           <MainButton onClick={() => {}} title="Visualizar" />
         </S.ActionContent>
+        <If
+          condition={!!otherAction}
+          render={() => <S.ActionContent>{otherAction?.()}</S.ActionContent>}
+        />
       </S.ActionContainer>
     </S.Container>
   );

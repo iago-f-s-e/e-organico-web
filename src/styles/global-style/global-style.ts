@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: ${fontSystem.weight.medium};
   }
 
-  button {
+  button, a {
     cursor: pointer;
     user-select: none;
     font-weight: ${fontSystem.weight.semibold};

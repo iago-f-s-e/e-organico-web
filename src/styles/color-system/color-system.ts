@@ -30,7 +30,7 @@ const entityColorSystem: EntityColorSystem = {
 const actionsColorSystem: ActionsColorSystem = {
   error: '#e74c3c',
   info: '#f1c40f',
-  success: '#1abc9c',
+  success: '#00b358',
   danger: '#e74c3c',
 };
 

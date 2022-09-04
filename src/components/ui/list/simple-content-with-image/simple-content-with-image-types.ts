@@ -4,6 +4,6 @@ export type ListSimpleContentWithImageProps = {
   title: string;
   imagePath: string;
   fieldsDescription?: Fields[];
-  othersActions?: () => JSX.Element;
+  otherAction?: () => JSX.Element;
   onClick: () => void;
 };

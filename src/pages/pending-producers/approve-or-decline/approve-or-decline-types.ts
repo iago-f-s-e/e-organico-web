@@ -1,1 +1,4 @@
-export const a = [];
+export type ApproveOrDeclineProps = {
+  onApprove: () => void;
+  onDecline: () => void;
+};
