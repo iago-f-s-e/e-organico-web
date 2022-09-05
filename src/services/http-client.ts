@@ -9,7 +9,7 @@ function responseErrorInterceptor(error: AxiosError) {
 }
 
 const _instance = axios.create({
-  baseURL: 'http://192.168.100.80:3030',
+  baseURL: 'http://192.168.100.150:3030',
   timeout: 3 * 60 * 1000,
 });
 
