@@ -9,7 +9,7 @@ export const Container = styled.article`
 
   width: ${componentSystem.percent_full};
   max-width: 50rem;
-  height: ${componentSystem.rem_large_3};
+  height: ${componentSystem.rem_extra_large_2};
 
   padding: ${gridSystem.small};
   margin: ${gridSystem.small} 0;
@@ -20,27 +20,13 @@ export const Container = styled.article`
   border-radius: 5px;
 `;
 
-export const ImageContainer = styled.section`
-  width: ${componentSystem.rem_large_2};
-  height: ${componentSystem.percent_full};
-
-  overflow: hidden;
-  border: 1px solid black;
-  border-radius: ${componentSystem.percent_full};
-`;
-
-export const Image = styled.img`
-  width: ${componentSystem.percent_full};
-  height: ${componentSystem.percent_full};
-  object-fit: contain;
-`;
-
 export const InfoContainer = styled.section`
   width: 30rem;
   height: ${componentSystem.percent_full};
 `;
 
 export const InfoHeader = styled.div`
+  display: flex;
   align-items: center;
   width: ${componentSystem.percent_full};
   height: 40%;
@@ -55,7 +41,7 @@ export const InfoContent = styled.div`
 
 export const Description = styled.div`
   display: flex;
-  margin-left: ${gridSystem.extra_small};
+  margin: ${gridSystem.extra_small};
 `;
 
 export const ActionContainer = styled.section`
@@ -71,7 +57,7 @@ export const ActionContent = styled.div`
   width: ${componentSystem.percent_full};
   height: ${componentSystem.percent_half};
 
-  padding: ${gridSystem.extra_small} ${gridSystem.small};
+  padding: ${gridSystem.small} ${gridSystem.small};
 `;
 
 export const Title = styled.p`

@@ -5,9 +5,9 @@ import { GlobalStyle } from './styles';
 
 export const App = (): JSX.Element => {
   return (
-    <main className="App">
+    <div className="App">
       <GlobalStyle />
       <PendingProducers />
-    </main>
+    </div>
   );
 };

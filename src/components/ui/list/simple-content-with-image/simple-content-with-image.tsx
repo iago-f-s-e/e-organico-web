@@ -1,33 +1,34 @@
 import React from 'react';
-import { If } from '../../../business';
+import { formatFields } from '../../../../utils';
+import { If, Map } from '../../../business';
 import { MainButton } from '../../main-button';
 
 import * as S from './simple-content-with-image-styles';
 import { ListSimpleContentWithImageProps } from './simple-content-with-image-types';
 
-const image =
-  'https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600';
-
 export const ListSimpleContentWithImage = ({
+  title,
   otherAction,
+  fieldsDescription,
 }: ListSimpleContentWithImageProps): JSX.Element => {
+  const fields = fieldsDescription ? formatFields(fieldsDescription) : [];
+
   return (
     <S.Container>
-      <S.ImageContainer>
-        <S.Image src={image} />
-      </S.ImageContainer>
-
       <S.InfoContainer>
         <S.InfoHeader>
-          <S.Title>{'Teste'.repeat(1)}</S.Title>
+          <S.Title>{title}</S.Title>
         </S.InfoHeader>
         <S.InfoContent>
-          <S.Description>
-            <S.DescriptionLabel>Endereço:</S.DescriptionLabel>
-            <S.DescriptionContent>
-              Rua Teresio morel, 1002, bloco 01, apto 107, SE
-            </S.DescriptionContent>
-          </S.Description>
+          <Map
+            data={fields}
+            render={(item, index) => (
+              <S.Description key={index.toString()}>
+                <S.DescriptionLabel>{item.name}</S.DescriptionLabel>
+                <S.DescriptionContent>{item.value}</S.DescriptionContent>
+              </S.Description>
+            )}
+          />
         </S.InfoContent>
       </S.InfoContainer>
 

@@ -17,9 +17,9 @@ export const ApproveOrDecline = ({ onApprove, onDecline }: ApproveOrDeclineProps
   const iconApprove = useMemo(
     () =>
       pointApproveIsOut ? (
-        <AiOutlineCheckCircle />
+        <AiOutlineCheckCircle size={20} />
       ) : (
-        <AiFillCheckCircle color={colorSystem.actions.success} />
+        <AiFillCheckCircle size={20} color={colorSystem.actions.success} />
       ),
     [pointApproveIsOut],
   );
@@ -27,9 +27,9 @@ export const ApproveOrDecline = ({ onApprove, onDecline }: ApproveOrDeclineProps
   const iconDecline = useMemo(
     () =>
       pointDeclineIsOut ? (
-        <AiOutlineCloseCircle />
+        <AiOutlineCloseCircle size={20} />
       ) : (
-        <AiFillCloseCircle color={colorSystem.actions.danger} />
+        <AiFillCloseCircle size={20} color={colorSystem.actions.danger} />
       ),
     [pointDeclineIsOut],
   );
