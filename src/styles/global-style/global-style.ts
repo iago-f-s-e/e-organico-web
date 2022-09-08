@@ -22,4 +22,17 @@ export const GlobalStyle = createGlobalStyle`
     user-select: none;
     font-weight: ${fontSystem.weight.semibold};
   }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${colorSystem.basic.grey};
+  }
+
 `;

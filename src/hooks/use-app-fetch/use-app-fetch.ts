@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { httpGET } from '../../services/http-client';
 
 type UseAppFetch<T> = {
@@ -18,22 +18,28 @@ export const useAppFetch = <T>(initialState: T, config?: Config): UseAppFetch<T>
   const [data, setData] = useState<T>(initialState);
   const [intervalId, setIntervalId] = useState<NodeJS.Timer>();
 
-  const handleCall = (url: string) => {
-    httpGET<T>(url)
-      .then((res) => setData(res))
-      .catch(() => setData(initialState))
-      .finally(() => setFetchIsLoading(false));
-  };
+  const handleCall = useCallback(
+    (url: string) => {
+      httpGET<T>(url)
+        .then((res) => setData(res))
+        .catch(() => setData(initialState))
+        .finally(() => setFetchIsLoading(false));
+    },
+    [initialState],
+  );
 
-  const call = (url: string) => {
-    setFetchIsLoading(true);
+  const call = useCallback(
+    (url: string) => {
+      setFetchIsLoading(true);
 
-    if (!config?.refetchInterval) return handleCall(url);
+      if (!config?.refetchInterval) return handleCall(url);
 
-    const interval = setInterval(() => handleCall(url), config?.refetchInterval);
+      const interval = setInterval(() => handleCall(url), config?.refetchInterval);
 
-    setIntervalId(interval);
-  };
+      setIntervalId(interval);
+    },
+    [handleCall, config?.refetchInterval],
+  );
 
   const fire = () => {
     if (intervalId) clearInterval(intervalId);

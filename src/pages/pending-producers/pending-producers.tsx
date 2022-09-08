@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 
-import * as C from '../../components';
 import { useAppFetch } from '../../hooks';
 import { PendingProducer } from '../../services/app';
 import { endpoints } from '../../services/endpoints';
 import { formatFullAddress, handleInputMask } from '../../utils';
 import { ApproveOrDecline } from './approve-or-decline';
+import * as C from '../../components';
 import * as S from './pending-producers-styles';
 
 export const PendingProducers = (): JSX.Element => {

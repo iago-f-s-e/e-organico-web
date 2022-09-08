@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import 'ioredis'; // eslint-disable-line
+
 import { App } from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
