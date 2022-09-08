@@ -16,6 +16,8 @@ const mainColorSystem: MainColorSystemColorSystem = {
 const basicColorSystem: BasicColorSystem = {
   white: '#FDFDFD',
   grey: '#80808F',
+  grey_dark: '#333340',
+  grey_light: '#AAAABC',
   black: '#121212',
   silver: '#D0D0D0',
   transparent: 'rgba(0,0,0,0)',

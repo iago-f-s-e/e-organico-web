@@ -9,6 +9,8 @@ export type BasicColorSystem = {
   white: string;
   black: string;
   grey: string;
+  grey_light: string;
+  grey_dark: string;
   silver: string;
   transparent: string;
 };

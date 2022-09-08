@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   button, a {
     cursor: pointer;
     user-select: none;
+    font-family: work-sans, sans-serif;
     font-weight: ${fontSystem.weight.semibold};
   }
 

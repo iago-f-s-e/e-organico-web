@@ -9,5 +9,5 @@ export const Container = styled.main`
 
   padding: ${gridSystem.small} ${gridSystem.medium};
 
-  background-color: ${colorSystem.main.primary_light};
+  background-color: ${colorSystem.basic.white};
 `;
