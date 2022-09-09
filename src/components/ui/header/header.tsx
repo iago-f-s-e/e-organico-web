@@ -22,6 +22,7 @@ export const Header = (): JSX.Element => {
         <PageName name="produtores" path="/" />
         <PageName name="produtores" path="/" />
       </S.Pages>
+
       <S.Profile />
     </S.Container>
   );
