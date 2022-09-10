@@ -3,9 +3,8 @@ import React, { useEffect } from 'react';
 import { useAppFetch } from '../../hooks';
 import { PendingProducer } from '../../services/app';
 import { endpoints } from '../../services/endpoints';
-import { formatFullAddress, handleInputMask } from '../../utils';
-import { ApproveOrDecline } from './approve-or-decline';
-import * as C from '../../components';
+import * as Cp from '../../components';
+import * as Ct from '../../containers';
 import * as S from './pending-producers-styles';
 
 export const PendingProducers = (): JSX.Element => {
@@ -17,23 +16,13 @@ export const PendingProducers = (): JSX.Element => {
 
   return (
     <S.Container>
-      <C.Map
-        data={data}
-        render={(item, index) => (
-          <C.ListSimpleContentWithImage
-            imagePath=""
-            onClick={() => {}}
-            title={item.name}
-            otherAction={() => <ApproveOrDecline onApprove={() => {}} onDecline={() => {}} />}
-            key={item.id ?? index.toString()}
-            fieldsDescription={[
-              { name: 'endereço', value: formatFullAddress(item.address), x_index: 1 },
-              { name: 'telefone', value: handleInputMask(item.phone, 'phone'), x_index: 2 },
-              { name: 'email', value: item.email, x_index: 3 },
-              { name: 'certificado', value: item.certificationType, x_index: 4 },
-            ]}
-          />
-        )}
+      <Cp.Tab
+        fields={[
+          {
+            name: 'Pendentes',
+            content: <Ct.ListPendingProducers producers={data} />,
+          },
+        ]}
       />
     </S.Container>
   );

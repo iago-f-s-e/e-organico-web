@@ -5,7 +5,7 @@ import {
   AiOutlineCloseCircle,
   AiFillCloseCircle,
 } from 'react-icons/ai';
-import { colorSystem } from '../../../styles';
+import { colorSystem } from '../../styles';
 
 import * as S from './approve-or-decline-styles';
 import { ApproveOrDeclineProps } from './approve-or-decline-types';
