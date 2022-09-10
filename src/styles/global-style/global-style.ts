@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button, select,
-  h1, h2, h3, h4, h5, h6, p, span {
+  h1, h2, h3, h4, h5, h6, p, span, li {
     color: ${colorSystem.basic.black};
     font-family: work-sans, sans-serif;
     font-style: normal;

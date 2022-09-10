@@ -4,6 +4,8 @@ import { colorSystem, gridSystem } from '../../styles';
 export const Container = styled.main`
   display: flex;
 
+  justify-content: center;
+
   width: 100%;
   height: 200vh;
 

@@ -24,7 +24,7 @@ const fontSizeSystem: FontSizeSystem = {
   rem_regular: pxToRem(FONT_SYSTEM_MULTIPLIER * remSmallFactor + 1),
   rem_regular_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remSmallFactor + 2),
   rem_medium: pxToRem(FONT_SYSTEM_MULTIPLIER * remMediumFactor),
-  rem_medium_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remMediumFactor + 4),
+  rem_medium_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remMediumFactor + 2),
   rem_large: pxToRem(FONT_SYSTEM_MULTIPLIER * remLargeFactor),
   rem_large_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remLargeFactor + 4),
   rem_extra_large: pxToRem(FONT_SYSTEM_MULTIPLIER * remExtraLargeFactor),
