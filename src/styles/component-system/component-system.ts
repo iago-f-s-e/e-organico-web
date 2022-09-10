@@ -16,6 +16,7 @@ type ComponentSystem = {
   percent_full: string;
   percent_half: string;
   percent_60: string;
+  percent_80: string;
 };
 
 const { COMPONENT_SYSTEM_MULTIPLIER } = styleConstants;
@@ -28,6 +29,7 @@ export const componentSystem: ComponentSystem = {
   percent_full: '100%',
   percent_half: '50%',
   percent_60: '60%',
+  percent_80: '80%',
 
   rem_small: pxToRem(COMPONENT_SYSTEM_MULTIPLIER * remSmallFactor),
   rem_medium: pxToRem(COMPONENT_SYSTEM_MULTIPLIER * remMediumFactor),
