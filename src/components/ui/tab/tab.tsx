@@ -21,8 +21,11 @@ export const Tab = ({ fields, selected, select }: TabProps): JSX.Element => {
           )}
         />
       </S.Header>
+      <S.Info>
+        <S.Title>Lista de produtores pendentes</S.Title>
+      </S.Info>
 
-      {fields[0].content}
+      <S.Content>{fields[0].content}</S.Content>
     </S.Container>
   );
 };

@@ -17,6 +17,11 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: ${fontSystem.weight.medium};
   }
 
+  button {
+    background-color: ${colorSystem.basic.white};
+
+  }
+
   button, a {
     cursor: pointer;
     user-select: none;
