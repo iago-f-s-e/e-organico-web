@@ -27,6 +27,7 @@ const entityColorSystem: EntityColorSystem = {
   money: '#00D07D',
   heart: '#F00040',
   border_light: 'rgba(200,200,200, 0.35)',
+  empty_icon: '#13748A',
 };
 
 const actionsColorSystem: ActionsColorSystem = {

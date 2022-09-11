@@ -28,6 +28,7 @@ const fontSizeSystem: FontSizeSystem = {
   rem_large: pxToRem(FONT_SYSTEM_MULTIPLIER * remLargeFactor),
   rem_large_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remLargeFactor + 4),
   rem_extra_large: pxToRem(FONT_SYSTEM_MULTIPLIER * remExtraLargeFactor),
+  rem_extra_large_2: pxToRem(FONT_SYSTEM_MULTIPLIER * (remExtraLargeFactor + 4)),
 };
 
 export const fontSystem: FontSystem = {

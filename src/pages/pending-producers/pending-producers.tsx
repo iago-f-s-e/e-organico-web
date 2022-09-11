@@ -45,7 +45,7 @@ export const PendingProducers = (): JSX.Element => {
             name: tabs.PENDING_PRODUCERS.FIRST,
             content: (
               <Cp.RenderOrEmpty
-                data={data}
+                toCheck={[]}
                 render={() => <Ct.ListPendingProducers producers={data} />}
               />
             ),
@@ -54,7 +54,7 @@ export const PendingProducers = (): JSX.Element => {
             name: tabs.PENDING_PRODUCERS.SECOND,
             content: (
               <Cp.RenderOrEmpty
-                data={data}
+                toCheck={data}
                 render={() => <Ct.ListPendingProducers producers={data} />}
               />
             ),
@@ -63,7 +63,7 @@ export const PendingProducers = (): JSX.Element => {
             name: tabs.PENDING_PRODUCERS.THIRD,
             content: (
               <Cp.RenderOrEmpty
-                data={data}
+                toCheck={data}
                 render={() => <Ct.ListPendingProducers producers={data} />}
               />
             ),

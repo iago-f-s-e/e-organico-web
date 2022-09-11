@@ -19,6 +19,7 @@ export type EntityColorSystem = {
   money: string;
   heart: string;
   border_light: string;
+  empty_icon: string;
 };
 
 export type ActionsColorSystem = {

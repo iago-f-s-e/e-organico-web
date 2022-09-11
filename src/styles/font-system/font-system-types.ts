@@ -7,6 +7,7 @@ export type FontSizeSystem = {
   rem_large: string;
   rem_large_2: string;
   rem_extra_large: string;
+  rem_extra_large_2: string;
 };
 
 export type FontWeightSystem = {
