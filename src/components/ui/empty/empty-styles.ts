@@ -10,12 +10,13 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: ${fontSystem.size.rem_extra_large_2};
-  font-weight: ${fontSystem.weight.regular};
-  color: ${colorSystem.entity.empty_icon};
+  font-size: ${fontSystem.size.rem_extra_large};
+  font-weight: ${fontSystem.weight.semibold};
+  color: ${colorSystem.basic.grey_dark};
 `;
 
 export const Image = styled.img`
-  width: 30rem;
+  margin-top: ${gridSystem.extra_large_2};
+  width: 50rem;
   height: 30rem;
 `;

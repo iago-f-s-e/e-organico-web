@@ -12,7 +12,8 @@ export const GlobalStyle = createGlobalStyle`
   body, input, textarea, button, select,
   h1, h2, h3, h4, h5, h6, p, span, li {
     color: ${colorSystem.basic.black};
-    font-family: work-sans, sans-serif;
+    font-family: Inter, -apple-system, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: ${fontSystem.weight.medium};
   }
@@ -25,7 +26,8 @@ export const GlobalStyle = createGlobalStyle`
   button, a {
     cursor: pointer;
     user-select: none;
-    font-family: work-sans, sans-serif;
+    font-family: Inter, -apple-system, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: ${fontSystem.weight.semibold};
   }
 

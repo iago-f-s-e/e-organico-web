@@ -1,7 +1,6 @@
 export type FontSizeSystem = {
   rem_small: string;
   rem_regular: string;
-  rem_regular_2: string;
   rem_medium: string;
   rem_medium_2: string;
   rem_large: string;

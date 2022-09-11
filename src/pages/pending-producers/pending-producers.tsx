@@ -1,39 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { PendingProducer } from '../../services/app';
 import * as Cp from '../../components';
 import * as Ct from '../../containers';
 import * as S from './pending-producers-styles';
 import { tabs } from '../../constants';
-
-const data: PendingProducer[] = [
-  {
-    address: {
-      city: 'San Francisco',
-      complement: 'complement',
-      district: 'San Francisco',
-      lat: '0.0',
-      long: '0.0',
-      number: '123',
-      state: 'San Francisco',
-      street: 'San Francisco',
-      zipCode: '49100000',
-    },
-    certificationType: 'AUDIT',
-    email: 'email@example.com',
-    id: '123',
-    name: 'John Doe',
-    phone: '75999503472',
-  },
-];
+import { useAppFetch } from '../../hooks';
+import { endpoints } from '../../services/endpoints';
 
 export const PendingProducers = (): JSX.Element => {
   const [tabSelected, setTabSelected] = useState<string>(tabs.PENDING_PRODUCERS.FIRST);
-  // const { data } = useAppFetch<PendingProducer[]>([]);
+  const { data, call } = useAppFetch<PendingProducer[]>([]);
 
-  // useEffect(() => {
-  //   call(endpoints.producer.PENDING);
-  // }, []); // eslint-disable-line
+  useEffect(() => {
+    call(endpoints.producer.PENDING);
+  }, []); // eslint-disable-line
 
   return (
     <S.Container>
@@ -47,7 +28,7 @@ export const PendingProducers = (): JSX.Element => {
             inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
-                toCheck={[]}
+                toCheck={data}
                 render={() => <Ct.ListPendingProducers producers={data} />}
               />
             ),
@@ -58,7 +39,7 @@ export const PendingProducers = (): JSX.Element => {
             inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
-                toCheck={data}
+                toCheck={[]}
                 render={() => <Ct.ListPendingProducers producers={data} />}
               />
             ),

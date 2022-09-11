@@ -62,7 +62,7 @@ export const ActionContent = styled.div`
 
 export const Title = styled.p`
   font-weight: ${fontSystem.weight.semibold};
-  font-size: ${fontSystem.size.rem_medium_2};
+  font-size: ${fontSystem.size.rem_medium};
 `;
 
 export const DescriptionContent = styled.p`

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { colorSystem, componentSystem, fontSystem, gridSystem } from '../../../styles';
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   width: ${componentSystem.percent_full};
 `;
 
@@ -21,7 +23,7 @@ export const TabName = styled.button`
   padding: ${gridSystem.small} 0;
 
   text-transform: capitalize;
-  font-size: ${fontSystem.size.rem_medium_2};
+  font-size: ${fontSystem.size.rem_medium};
   font-weight: ${fontSystem.weight.light};
 
   &.tab-is-selected {

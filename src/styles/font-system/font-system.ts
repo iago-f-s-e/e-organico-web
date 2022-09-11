@@ -1,5 +1,3 @@
-import { pxToRem } from '../px-to-rem';
-import { styleConstants } from '../styles-constants';
 import { FontWeightSystem, FontSizeSystem, FontSystem } from './font-system-types';
 
 const fontWeightSystem: FontWeightSystem = {
@@ -13,22 +11,15 @@ const fontWeightSystem: FontWeightSystem = {
   black: 900,
 };
 
-const { FONT_SYSTEM_MULTIPLIER } = styleConstants;
-const remSmallFactor = 3;
-const remMediumFactor = 4;
-const remLargeFactor = 6;
-const remExtraLargeFactor = 8;
-
 const fontSizeSystem: FontSizeSystem = {
-  rem_small: pxToRem(FONT_SYSTEM_MULTIPLIER * remSmallFactor),
-  rem_regular: pxToRem(FONT_SYSTEM_MULTIPLIER * remSmallFactor + 1),
-  rem_regular_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remSmallFactor + 2),
-  rem_medium: pxToRem(FONT_SYSTEM_MULTIPLIER * remMediumFactor),
-  rem_medium_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remMediumFactor + 2),
-  rem_large: pxToRem(FONT_SYSTEM_MULTIPLIER * remLargeFactor),
-  rem_large_2: pxToRem(FONT_SYSTEM_MULTIPLIER * remLargeFactor + 4),
-  rem_extra_large: pxToRem(FONT_SYSTEM_MULTIPLIER * remExtraLargeFactor),
-  rem_extra_large_2: pxToRem(FONT_SYSTEM_MULTIPLIER * (remExtraLargeFactor + 4)),
+  rem_small: '0.75rem',
+  rem_regular: '1rem',
+  rem_medium: '1.125rem',
+  rem_medium_2: '1.250rem',
+  rem_large: '1.5rem',
+  rem_large_2: '2rem',
+  rem_extra_large: '2.5rem',
+  rem_extra_large_2: '3rem',
 };
 
 export const fontSystem: FontSystem = {

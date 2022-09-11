@@ -9,6 +9,7 @@ type GridSystem = {
   large: string;
   large_2X: string;
   extra_large: string;
+  extra_large_2: string;
 };
 
 const { GRID_SYSTEM_MULTIPLIER } = styleConstants;
@@ -25,4 +26,5 @@ export const gridSystem: GridSystem = {
   large: pxToRem(GRID_SYSTEM_MULTIPLIER * largeFactor),
   large_2X: pxToRem(GRID_SYSTEM_MULTIPLIER * (largeFactor + 1)),
   extra_large: pxToRem(GRID_SYSTEM_MULTIPLIER * extraLargeFactor),
+  extra_large_2: pxToRem(GRID_SYSTEM_MULTIPLIER * extraLargeFactor * 2),
 };

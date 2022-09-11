@@ -45,6 +45,6 @@ export const PageName = styled.p`
 
 export const PageLink = styled.a`
   text-transform: capitalize;
-  font-size: ${fontSystem.size.rem_medium_2};
+  font-size: ${fontSystem.size.rem_medium};
   font-weight: ${fontSystem.weight.regular};
 `;
