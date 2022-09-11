@@ -50,4 +50,8 @@ export const Input = styled.input`
   border: none;
   font-size: ${fontSystem.size.rem_medium};
   font-weight: ${fontSystem.weight.regular};
+
+  &::placeholder {
+    font-weight: ${fontSystem.weight.light};
+  }
 `;

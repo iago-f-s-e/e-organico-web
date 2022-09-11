@@ -42,7 +42,9 @@ export const PendingProducers = (): JSX.Element => {
         selected={tabSelected}
         fields={[
           {
-            name: tabs.PENDING_PRODUCERS.FIRST,
+            tabName: tabs.PENDING_PRODUCERS.FIRST,
+            pageTitle: 'Lista de produtores pendentes',
+            inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
                 toCheck={[]}
@@ -51,7 +53,9 @@ export const PendingProducers = (): JSX.Element => {
             ),
           },
           {
-            name: tabs.PENDING_PRODUCERS.SECOND,
+            tabName: tabs.PENDING_PRODUCERS.SECOND,
+            pageTitle: 'Lista de produtores ativos',
+            inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
                 toCheck={data}
@@ -60,7 +64,9 @@ export const PendingProducers = (): JSX.Element => {
             ),
           },
           {
-            name: tabs.PENDING_PRODUCERS.THIRD,
+            tabName: tabs.PENDING_PRODUCERS.THIRD,
+            pageTitle: 'Lista de produtores inativos',
+            inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
                 toCheck={data}
