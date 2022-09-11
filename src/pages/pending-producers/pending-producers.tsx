@@ -43,15 +43,30 @@ export const PendingProducers = (): JSX.Element => {
         fields={[
           {
             name: tabs.PENDING_PRODUCERS.FIRST,
-            content: <Ct.ListPendingProducers producers={data} />,
+            content: (
+              <Cp.RenderOrEmpty
+                data={data}
+                render={() => <Ct.ListPendingProducers producers={data} />}
+              />
+            ),
           },
           {
             name: tabs.PENDING_PRODUCERS.SECOND,
-            content: <Ct.ListPendingProducers producers={data} />,
+            content: (
+              <Cp.RenderOrEmpty
+                data={data}
+                render={() => <Ct.ListPendingProducers producers={data} />}
+              />
+            ),
           },
           {
             name: tabs.PENDING_PRODUCERS.THIRD,
-            content: <Ct.ListPendingProducers producers={data} />,
+            content: (
+              <Cp.RenderOrEmpty
+                data={data}
+                render={() => <Ct.ListPendingProducers producers={data} />}
+              />
+            ),
           },
         ]}
       />
