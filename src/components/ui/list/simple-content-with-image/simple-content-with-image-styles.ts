@@ -16,7 +16,7 @@ export const Container = styled.article`
 
   background: ${colorSystem.basic.white};
 
-  border: 1px solid black;
+  border: 1px solid ${colorSystem.entity.border_light};
   border-radius: 5px;
 `;
 
