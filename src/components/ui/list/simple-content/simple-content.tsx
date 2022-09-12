@@ -1,17 +1,19 @@
 import React from 'react';
-import { AiOutlineDoubleRight } from 'react-icons/ai';
+import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from 'react-icons/ai';
 import { formatFields } from '../../../../utils';
-import { If, Map } from '../../../business';
+import { If, IfElse, Map } from '../../../business';
 import { MainButton } from '../../main-button';
 
-import * as S from './simple-content-with-image-styles';
-import { ListSimpleContentWithImageProps } from './simple-content-with-image-types';
+import * as S from './simple-content-styles';
+import { ListSimpleContentFC } from './simple-content-types';
 
-export const ListSimpleContentWithImage = ({
+export const ListSimpleContent: ListSimpleContentFC = ({
   title,
   otherAction,
   fieldsDescription,
-}: ListSimpleContentWithImageProps): JSX.Element => {
+  showExpandOrRetract,
+  isExpanded,
+}) => {
   const fields = fieldsDescription ? formatFields(fieldsDescription) : [];
 
   return (
@@ -44,9 +46,20 @@ export const ListSimpleContentWithImage = ({
           />
         </S.ActionContainer>
       </S.Article>
-      <S.ExpanseOrMinimize>
-        <AiOutlineDoubleRight />
-      </S.ExpanseOrMinimize>
+      <If
+        condition={showExpandOrRetract}
+        render={() => (
+          <S.ExpanseOrMinimize>
+            <IfElse
+              condition={isExpanded}
+              render={{
+                toBeTruthy: () => <AiOutlineDoubleLeft />,
+                toBeFalsy: () => <AiOutlineDoubleRight />,
+              }}
+            />
+          </S.ExpanseOrMinimize>
+        )}
+      />
     </S.Container>
   );
 };

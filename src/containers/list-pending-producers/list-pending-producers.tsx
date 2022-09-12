@@ -1,19 +1,25 @@
 import React from 'react';
 
 import * as C from '../../components';
+import { useExpandList } from '../../hooks/use-expand-list';
 import { formatFullAddress, handleInputMask } from '../../utils';
 import { ApproveOrDecline } from '../approve-or-decline';
 import { ListPendingProducersProps } from './list-pending-producers-types';
 
 export const ListPendingProducers = ({ producers }: ListPendingProducersProps): JSX.Element => {
+  const { isExpanded, expand, retract } = useExpandList();
+
   return (
     <C.Map
       data={producers}
       render={(item, index) => (
-        <C.ListSimpleContentWithImage
-          imagePath=""
+        <C.ListSimpleContent
           onClick={() => {}}
           title={item.name}
+          showExpandOrRetract
+          isExpanded={isExpanded(item.id)}
+          expand={() => expand(item.id)}
+          retract={() => retract(item.id)}
           otherAction={() => <ApproveOrDecline onApprove={() => {}} onDecline={() => {}} />}
           key={item.id ?? index.toString()}
           fieldsDescription={[

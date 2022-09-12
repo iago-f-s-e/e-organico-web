@@ -1,5 +1,7 @@
+import { Nil } from '../../../@types/globals';
+
 type Props = {
-  condition: boolean;
+  condition: boolean | Nil;
   render: () => JSX.Element;
 };
 
