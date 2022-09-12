@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { componentSystem, gridSystem, fontSystem, colorSystem } from '../../../../styles';
 
-export const Container = styled.article`
+export const Container = styled.div`
   display: flex;
+  overflow: hidden;
 
   align-items: center;
   justify-content: space-around;
@@ -11,13 +12,24 @@ export const Container = styled.article`
   max-width: 50rem;
   height: ${componentSystem.rem_extra_large_2};
 
-  padding: ${gridSystem.small};
   margin: ${gridSystem.small} 0;
 
   background: ${colorSystem.basic.white};
 
   border: 1px solid ${colorSystem.entity.border_light};
   border-radius: 5px;
+`;
+
+export const Article = styled.article`
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  width: ${componentSystem.percent_full};
+  height: ${componentSystem.percent_full};
+
+  padding: ${gridSystem.small};
 `;
 
 export const InfoContainer = styled.section`
@@ -73,4 +85,11 @@ export const DescriptionContent = styled.p`
 export const DescriptionLabel = styled(DescriptionContent)`
   color: ${colorSystem.basic.grey};
   margin-right: 2px;
+`;
+
+export const ExpanseOrMinimize = styled.button`
+  width: 20px;
+  height: ${componentSystem.percent_full};
+  border: none;
+  border-left: 1px solid ${colorSystem.entity.border_light};
 `;

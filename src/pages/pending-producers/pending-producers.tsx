@@ -29,7 +29,20 @@ export const PendingProducers = (): JSX.Element => {
             content: (
               <Cp.RenderOrEmpty
                 toCheck={data}
-                render={() => <Ct.ListPendingProducers producers={data} />}
+                render={() => (
+                  <Ct.ListPendingProducers
+                    producers={[
+                      ...data,
+                      ...data,
+                      ...data,
+                      ...data,
+                      ...data,
+                      ...data,
+                      ...data,
+                      ...data,
+                    ]}
+                  />
+                )}
               />
             ),
           },
