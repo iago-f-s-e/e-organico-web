@@ -22,11 +22,7 @@ export const ListSimpleContent: ListSimpleContentFC = ({
 
   const { action, info, article, container } = getSimpleContentClassNames(isExpanded);
 
-  const handleExpandeOrRetract = () => {
-    console.log(id);
-
-    return isExpanded ? retract?.(id) : expand?.(id);
-  };
+  const handleExpandeOrRetract = () => (isExpanded ? retract?.() : expand?.());
 
   return (
     <S.Container className={`${container.main}-${id}`} id={id}>

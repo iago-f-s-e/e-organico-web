@@ -19,8 +19,8 @@ export const ListPendingProducers = ({ producers }: ListPendingProducersProps): 
           title={item.name}
           showExpandOrRetract
           isExpanded={isExpanded(item.id)}
-          expand={(id) => expand(id)}
-          retract={(id) => retract(id)}
+          expand={() => expand(item.id)}
+          retract={() => retract(item.id)}
           otherAction={() => <ApproveOrDecline onApprove={() => {}} onDecline={() => {}} />}
           key={item.id ?? index.toString()}
           fieldsDescription={[

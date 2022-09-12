@@ -5,8 +5,8 @@ type ListSimpleContentProps = {
   id: string;
   showExpandOrRetract?: boolean;
   isExpanded?: boolean;
-  expand?: (id: string) => void;
-  retract?: (id: string) => void;
+  expand?: () => void;
+  retract?: () => void;
   fieldsDescription?: Fields[];
   otherAction?: () => JSX.Element;
   onClick: () => void;
