@@ -1,28 +1,37 @@
 import styled from 'styled-components';
+import { simpleContentClassNames } from './simple-content-class-names';
 import { componentSystem, gridSystem, fontSystem, colorSystem } from '../../../../styles';
 
-export const Container = styled.div`
+type ID = { id?: string };
+
+export const Container = styled.div<ID>`
   display: flex;
   overflow: hidden;
 
   align-items: center;
   justify-content: space-around;
 
-  width: ${componentSystem.percent_full};
   max-width: 50rem;
   height: ${componentSystem.rem_extra_large_2};
 
-  margin: ${gridSystem.small} 0;
+  margin: ${gridSystem.small};
 
   background: ${colorSystem.basic.white};
 
   border: 1px solid ${colorSystem.entity.border_light};
   border-radius: 5px;
+
+  &.${simpleContentClassNames.container.main.IS_NOT_EXPANDED}-${(props) => props.id} {
+    width: 28rem;
+  }
+
+  &.${simpleContentClassNames.container.main.IS_EXPANDED}-${(props) => props.id} {
+    width: ${componentSystem.percent_full};
+  }
 `;
 
-export const Article = styled.article`
+export const Article = styled.article<ID>`
   display: flex;
-
   align-items: center;
   justify-content: space-around;
 
@@ -30,25 +39,57 @@ export const Article = styled.article`
   height: ${componentSystem.percent_full};
 
   padding: ${gridSystem.small};
+
+  &.${simpleContentClassNames.article.main.IS_NOT_EXPANDED}-${(props) => props.id} {
+    flex-direction: column;
+  }
+
+  &.${simpleContentClassNames.article.main.IS_EXPANDED}-${(props) => props.id} {
+    flex-direction: row;
+  }
 `;
 
-export const InfoContainer = styled.section`
-  width: 30rem;
-  height: ${componentSystem.percent_full};
+export const InfoContainer = styled.section<ID>`
+  &.${simpleContentClassNames.info.container.IS_NOT_EXPANDED}-${(props) => props.id} {
+    flex: 1;
+    width: 22rem;
+  }
+
+  &.${simpleContentClassNames.info.container.IS_EXPANDED}-${(props) => props.id} {
+    height: ${componentSystem.percent_full};
+    width: 30rem;
+  }
 `;
 
-export const InfoHeader = styled.div`
+export const InfoHeader = styled.div<ID>`
   display: flex;
   align-items: center;
   width: ${componentSystem.percent_full};
-  height: 40%;
+
   border-bottom: 1px solid ${colorSystem.entity.border_light};
+
+  &.${simpleContentClassNames.info.header.IS_NOT_EXPANDED}-${(props) => props.id} {
+    height: ${componentSystem.percent_full};
+    justify-content: center;
+  }
+
+  &.${simpleContentClassNames.info.header.IS_EXPANDED}-${(props) => props.id} {
+    height: 40%;
+    justify-content: flex-start;
+  }
 `;
 
-export const InfoContent = styled.div`
-  display: inline-flex;
+export const InfoContent = styled.div<ID>`
   flex-wrap: wrap;
   align-items: center;
+
+  &.${simpleContentClassNames.info.content.IS_NOT_EXPANDED}-${(props) => props.id} {
+    display: none;
+  }
+
+  &.${simpleContentClassNames.info.content.IS_EXPANDED}-${(props) => props.id} {
+    display: inline-flex;
+  }
 `;
 
 export const Description = styled.div`
@@ -56,20 +97,36 @@ export const Description = styled.div`
   margin: ${gridSystem.extra_small};
 `;
 
-export const ActionContainer = styled.section`
+export const ActionContainer = styled.section<ID>`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   width: ${componentSystem.rem_extra_large_4};
-  height: ${componentSystem.percent_full};
+
+  &.${simpleContentClassNames.action.container.IS_NOT_EXPANDED}-${(props) => props.id} {
+    flex: 1;
+    height: ${componentSystem.rem_medium};
+  }
+
+  &.${simpleContentClassNames.action.container.IS_EXPANDED}-${(props) => props.id} {
+    height: ${componentSystem.percent_full};
+  }
 `;
 
-export const ActionContent = styled.div`
+export const ActionContent = styled.div<ID>`
   width: ${componentSystem.percent_full};
   height: ${componentSystem.percent_half};
 
   padding: ${gridSystem.small} ${gridSystem.small};
+
+  &.${simpleContentClassNames.action.content.IS_NOT_EXPANDED}-${(props) => props.id} {
+    display: none;
+  }
+
+  &.${simpleContentClassNames.action.content.IS_EXPANDED}-${(props) => props.id} {
+    display: block;
+  }
 `;
 
 export const Title = styled.p`
@@ -87,7 +144,7 @@ export const DescriptionLabel = styled(DescriptionContent)`
   margin-right: 2px;
 `;
 
-export const ExpanseOrMinimize = styled.button`
+export const ExpandeOrRetract = styled.button`
   width: 20px;
   height: ${componentSystem.percent_full};
   border: none;

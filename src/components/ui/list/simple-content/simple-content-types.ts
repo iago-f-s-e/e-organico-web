@@ -2,10 +2,11 @@ import { Fields } from '../../../../@types/globals';
 
 type ListSimpleContentProps = {
   title: string;
+  id: string;
   showExpandOrRetract?: boolean;
   isExpanded?: boolean;
-  expand?: () => void;
-  retract?: () => void;
+  expand?: (id: string) => void;
+  retract?: (id: string) => void;
   fieldsDescription?: Fields[];
   otherAction?: () => JSX.Element;
   onClick: () => void;

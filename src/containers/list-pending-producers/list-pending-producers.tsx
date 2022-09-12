@@ -15,11 +15,12 @@ export const ListPendingProducers = ({ producers }: ListPendingProducersProps): 
       render={(item, index) => (
         <C.ListSimpleContent
           onClick={() => {}}
+          id={item.id}
           title={item.name}
           showExpandOrRetract
           isExpanded={isExpanded(item.id)}
-          expand={() => expand(item.id)}
-          retract={() => retract(item.id)}
+          expand={(id) => expand(id)}
+          retract={(id) => retract(id)}
           otherAction={() => <ApproveOrDecline onApprove={() => {}} onDecline={() => {}} />}
           key={item.id ?? index.toString()}
           fieldsDescription={[

@@ -65,4 +65,7 @@ export const Title = styled.h2`
   font-weight: ${fontSystem.weight.semibold};
 `;
 
-export const Content = styled.section``;
+export const Content = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+`;

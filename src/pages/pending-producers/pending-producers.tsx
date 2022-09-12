@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-import { PendingProducer } from '../../services/app';
+// import { PendingProducer } from '../../services/app';
 import * as Cp from '../../components';
 import * as Ct from '../../containers';
 import * as S from './pending-producers-styles';
 import { tabs } from '../../constants';
-import { useAppFetch } from '../../hooks';
-import { endpoints } from '../../services/endpoints';
+// import { useAppFetch } from '../../hooks';
+// import { endpoints } from '../../services/endpoints';
+import { data } from './data';
 
 export const PendingProducers = (): JSX.Element => {
   const [tabSelected, setTabSelected] = useState<string>(tabs.PENDING_PRODUCERS.FIRST);
-  const { data, call } = useAppFetch<PendingProducer[]>([]);
+  // const { call } = useAppFetch<PendingProducer[]>([]);
 
-  useEffect(() => {
-    call(endpoints.producer.PENDING);
-  }, []); // eslint-disable-line
+  // useEffect(() => {
+  //   call(endpoints.producer.PENDING);
+  // }, []); // eslint-disable-line
 
   return (
     <S.Container>
@@ -29,20 +30,7 @@ export const PendingProducers = (): JSX.Element => {
             content: (
               <Cp.RenderOrEmpty
                 toCheck={data}
-                render={() => (
-                  <Ct.ListPendingProducers
-                    producers={[
-                      ...data,
-                      ...data,
-                      ...data,
-                      ...data,
-                      ...data,
-                      ...data,
-                      ...data,
-                      ...data,
-                    ]}
-                  />
-                )}
+                render={() => <Ct.ListPendingProducers producers={data} />}
               />
             ),
           },
