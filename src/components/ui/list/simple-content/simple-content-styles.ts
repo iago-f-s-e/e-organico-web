@@ -21,6 +21,8 @@ export const Container = styled.div<ID>`
   border: 1px solid ${colorSystem.entity.border_light};
   border-radius: 5px;
 
+  transition: 0.8s linear;
+
   &.${simpleContentClassNames.container.main.IS_NOT_EXPANDED}-${(props) => props.id} {
     width: 28rem;
   }
@@ -40,6 +42,8 @@ export const Article = styled.article<ID>`
 
   padding: ${gridSystem.small};
 
+  transition: 0.8s linear;
+
   &.${simpleContentClassNames.article.main.IS_NOT_EXPANDED}-${(props) => props.id} {
     flex-direction: column;
   }
@@ -50,6 +54,8 @@ export const Article = styled.article<ID>`
 `;
 
 export const InfoContainer = styled.section<ID>`
+  transition: 0.8s linear;
+
   &.${simpleContentClassNames.info.container.IS_NOT_EXPANDED}-${(props) => props.id} {
     flex: 1;
     width: 22rem;
@@ -68,6 +74,8 @@ export const InfoHeader = styled.div<ID>`
 
   border-bottom: 1px solid ${colorSystem.entity.border_light};
 
+  transition: 0.8s linear;
+
   &.${simpleContentClassNames.info.header.IS_NOT_EXPANDED}-${(props) => props.id} {
     height: ${componentSystem.percent_full};
     justify-content: center;
@@ -82,6 +90,8 @@ export const InfoHeader = styled.div<ID>`
 export const InfoContent = styled.div<ID>`
   flex-wrap: wrap;
   align-items: center;
+
+  transition: 0.8s linear;
 
   &.${simpleContentClassNames.info.content.IS_NOT_EXPANDED}-${(props) => props.id} {
     display: none;
@@ -104,6 +114,8 @@ export const ActionContainer = styled.section<ID>`
 
   width: ${componentSystem.rem_extra_large_4};
 
+  transition: 0.8s linear;
+
   &.${simpleContentClassNames.action.container.IS_NOT_EXPANDED}-${(props) => props.id} {
     flex: 1;
     height: ${componentSystem.rem_medium};
@@ -119,6 +131,8 @@ export const ActionContent = styled.div<ID>`
   height: ${componentSystem.percent_half};
 
   padding: ${gridSystem.small} ${gridSystem.small};
+
+  transition: 0.8s linear;
 
   &.${simpleContentClassNames.action.content.IS_NOT_EXPANDED}-${(props) => props.id} {
     display: none;

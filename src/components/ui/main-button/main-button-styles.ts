@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { componentSystem, colorSystem } from '../../../styles';
 
 export const Container = styled.button`
+  overflow: hidden;
+
   width: ${componentSystem.percent_full};
   height: ${componentSystem.percent_full};
 
