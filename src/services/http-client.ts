@@ -36,7 +36,10 @@ export const httpPUT = async <Req, Res = Req>(
 
 export const httpPATCH = async <Req, Res = Req>(
   url: string,
-  token?: string,
   data?: Req,
+  token?: string,
 ): Promise<Res> =>
   (await httpClient.patch<Res>(url, data, { headers: { authorization: `Bearer ${token}` } })).data;
+
+export const httpDELETE = async <Req, Res = Req>(url: string, token?: string): Promise<Res> =>
+  (await httpClient.delete<Res>(url, { headers: { authorization: `Bearer ${token}` } })).data;

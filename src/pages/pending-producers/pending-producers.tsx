@@ -8,13 +8,18 @@ import { tabs } from '../../constants';
 // import { useAppFetch } from '../../hooks';
 // import { endpoints } from '../../services/endpoints';
 import { data } from './data';
+// import { useAppPush } from '../../hooks/use-app-push';
 
 export const PendingProducers = (): JSX.Element => {
   const [tabSelected, setTabSelected] = useState<string>(tabs.PENDING_PRODUCERS.FIRST);
   // const { call } = useAppFetch<PendingProducer[]>([]);
 
+  // const { call } = useAppPush();
+
   // useEffect(() => {
-  //   call(endpoints.producer.PENDING);
+  //   // call(endpoints.producer.PENDING);
+
+  //   call('alou', 'post', 20);
   // }, []); // eslint-disable-line
 
   return (
