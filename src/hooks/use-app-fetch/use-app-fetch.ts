@@ -3,6 +3,7 @@ import { httpGET } from '../../services/http-client';
 
 type UseAppFetch<T> = {
   data: T;
+  mutate: (fn: () => T) => void;
   call: (url: string) => void;
   fire: () => void;
   fetchIsLoading: boolean;
@@ -45,5 +46,9 @@ export const useAppFetch = <T>(initialState: T, config?: Config): UseAppFetch<T>
     if (intervalId) clearInterval(intervalId);
   };
 
-  return { fetchIsLoading, data, call, fire };
+  const mutate = (fn: () => T) => {
+    setData(fn());
+  };
+
+  return { fetchIsLoading, data, call, fire, mutate };
 };
