@@ -6,7 +6,10 @@ import { formatFullAddress, handleInputMask } from '../../utils';
 import { ApproveOrDecline } from '../approve-or-decline';
 import { ListPendingProducersProps } from './list-pending-producers-types';
 
-export const ListPendingProducers = ({ producers }: ListPendingProducersProps): JSX.Element => {
+export const ListPendingProducers = ({
+  producers,
+  onAccept,
+}: ListPendingProducersProps): JSX.Element => {
   const { isExpanded, expand, retract } = useExpandList();
 
   return (
@@ -21,7 +24,9 @@ export const ListPendingProducers = ({ producers }: ListPendingProducersProps): 
           isExpanded={isExpanded(item.id)}
           expand={() => expand(item.id)}
           retract={() => retract(item.id)}
-          otherAction={() => <ApproveOrDecline onApprove={() => {}} onDecline={() => {}} />}
+          otherAction={() => (
+            <ApproveOrDecline onApprove={() => onAccept(item.id)} onDecline={() => {}} />
+          )}
           key={item.id ?? index.toString()}
           fieldsDescription={[
             { name: 'endereço', value: formatFullAddress(item.address), x_index: 1 },

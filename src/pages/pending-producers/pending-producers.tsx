@@ -1,26 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// import { PendingProducer } from '../../services/app';
+import { PendingProducer } from '../../services/app';
 import * as Cp from '../../components';
 import * as Ct from '../../containers';
 import * as S from './pending-producers-styles';
 import { tabs } from '../../constants';
-// import { useAppFetch } from '../../hooks';
-// import { endpoints } from '../../services/endpoints';
-import { data } from './data';
-// import { useAppPush } from '../../hooks/use-app-push';
+import { useAppFetch } from '../../hooks';
+import { endpoints } from '../../services/endpoints';
+import { useAppPush } from '../../hooks/use-app-push';
 
 export const PendingProducers = (): JSX.Element => {
   const [tabSelected, setTabSelected] = useState<string>(tabs.PENDING_PRODUCERS.FIRST);
-  // const { call } = useAppFetch<PendingProducer[]>([]);
 
-  // const { call } = useAppPush();
+  const appPush = useAppPush();
+  const pendingProducer = useAppFetch<PendingProducer[]>([]);
 
-  // useEffect(() => {
-  //   // call(endpoints.producer.PENDING);
+  const handleAcceptPendingProducer = (id: string) => {
+    const url = `${endpoints.producer.DEFAULT}/${id}/accept`;
 
-  //   call('alou', 'post', 20);
-  // }, []); // eslint-disable-line
+    appPush.call<null, { id: string }>(url, 'patch', null, {
+      onSuccess: ({ id }) =>
+        pendingProducer.mutate(() => pendingProducer.data.filter((v) => v.id !== id)),
+    });
+  };
+
+  useEffect(() => {
+    pendingProducer.call(endpoints.producer.PENDING);
+  }, []); // eslint-disable-line
 
   return (
     <S.Container>
@@ -34,8 +40,13 @@ export const PendingProducers = (): JSX.Element => {
             inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
-                toCheck={data}
-                render={() => <Ct.ListPendingProducers producers={data} />}
+                toCheck={pendingProducer.data}
+                render={() => (
+                  <Ct.ListPendingProducers
+                    producers={pendingProducer.data}
+                    onAccept={(id) => handleAcceptPendingProducer(id)}
+                  />
+                )}
               />
             ),
           },
@@ -46,7 +57,9 @@ export const PendingProducers = (): JSX.Element => {
             content: (
               <Cp.RenderOrEmpty
                 toCheck={[]}
-                render={() => <Ct.ListPendingProducers producers={data} />}
+                render={() => (
+                  <Ct.ListPendingProducers producers={pendingProducer.data} onAccept={() => {}} />
+                )}
               />
             ),
           },
@@ -56,8 +69,10 @@ export const PendingProducers = (): JSX.Element => {
             inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
-                toCheck={data}
-                render={() => <Ct.ListPendingProducers producers={data} />}
+                toCheck={[]}
+                render={() => (
+                  <Ct.ListPendingProducers producers={pendingProducer.data} onAccept={() => {}} />
+                )}
               />
             ),
           },
