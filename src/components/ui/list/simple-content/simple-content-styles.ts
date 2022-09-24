@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import { componentSystem, gridSystem, fontSystem, colorSystem } from '@src/styles';
 import { simpleContentClassNames } from './simple-content-class-names';
-import { componentSystem, gridSystem, fontSystem, colorSystem } from '../../../../styles';
 
 type ID = { id?: string };
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colorSystem, componentSystem, fontSystem, gridSystem } from '../../../styles';
+import { colorSystem, componentSystem, fontSystem, gridSystem } from '@src/styles';
 
 export const Container = styled.header`
   display: flex;

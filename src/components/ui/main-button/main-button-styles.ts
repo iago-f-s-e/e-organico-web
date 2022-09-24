@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { componentSystem, colorSystem } from '../../../styles';
+import { componentSystem, colorSystem } from '@src/styles';
 
 export const Container = styled.button`
   overflow: hidden;

@@ -9,6 +9,8 @@ import { useAppFetch } from '../../hooks';
 import { endpoints } from '../../services/endpoints';
 import { useAppPush } from '../../hooks/use-app-push';
 
+import p from './data';
+
 export const PendingProducers = (): JSX.Element => {
   const [tabSelected, setTabSelected] = useState<string>(tabs.PENDING_PRODUCERS.FIRST);
 
@@ -25,7 +27,7 @@ export const PendingProducers = (): JSX.Element => {
   };
 
   useEffect(() => {
-    pendingProducer.call(endpoints.producer.PENDING);
+    // pendingProducer.call(endpoints.producer.PENDING);
   }, []); // eslint-disable-line
 
   return (
@@ -40,10 +42,10 @@ export const PendingProducers = (): JSX.Element => {
             inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
-                toCheck={pendingProducer.data}
+                toCheck={p}
                 render={() => (
                   <Ct.ListPendingProducers
-                    producers={pendingProducer.data}
+                    producers={p}
                     onAccept={(id) => handleAcceptPendingProducer(id)}
                   />
                 )}

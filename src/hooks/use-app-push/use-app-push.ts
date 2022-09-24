@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import * as client from '../../services/http-client';
+import * as client from '@src/services/http-client';
 import {
   RequisitionTypeOptionalData,
   RequisitionTypeRequiredData,

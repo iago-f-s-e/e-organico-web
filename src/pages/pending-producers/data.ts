@@ -1,6 +1,6 @@
 import { PendingProducer } from '../../services/app';
 
-export const data: PendingProducer[] = [
+const data: PendingProducer[] = [
   {
     id: '730e0a38-3ae1-464d-a784-abaf296766e4',
     certificationType: 'IN CONVERSION',
@@ -146,3 +146,5 @@ export const data: PendingProducer[] = [
     },
   },
 ];
+
+export default data;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from 'react-icons/ai';
-import { formatFields } from '../../../../utils';
-import { If, IfElse, Map } from '../../../business';
+import { formatFields } from '@src/utils';
+import { If, IfElse, Map } from '@src/components/business';
 import { MainButton } from '../../main-button';
 import { getSimpleContentClassNames } from './simple-content-class-names';
 

@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { httpGET } from '../../services/http-client';
+import { httpGET } from '@src/services/http-client';
 
 type UseAppFetch<T> = {
   data: T;

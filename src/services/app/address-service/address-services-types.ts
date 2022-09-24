@@ -1,4 +1,4 @@
-import { StringOrNil } from '../../../@types/globals';
+import { StringOrNil } from '@src/@types/globals';
 
 export type Address = {
   state: string;

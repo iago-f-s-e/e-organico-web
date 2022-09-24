@@ -1,4 +1,4 @@
-import { PendingProducer } from '../../services/app';
+import { PendingProducer } from '@src/services/app';
 
 export type ListPendingProducersProps = {
   producers: PendingProducer[];

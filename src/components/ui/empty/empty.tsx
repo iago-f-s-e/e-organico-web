@@ -1,7 +1,7 @@
 import React from 'react';
 
+import Icon from '@src/assets/img/empty.png';
 import * as S from './empty-styles';
-import Icon from '../../../assets/img/empty.png';
 
 export const Empty = (): JSX.Element => {
   return (

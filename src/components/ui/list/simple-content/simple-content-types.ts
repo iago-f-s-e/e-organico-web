@@ -1,4 +1,4 @@
-import { Fields } from '../../../../@types/globals';
+import { Fields } from '@src/@types/globals';
 
 type ListSimpleContentProps = {
   title: string;

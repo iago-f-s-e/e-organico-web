@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { colorSystem } from '../../../../styles';
+import { colorSystem } from '@src/styles';
 
 import * as S from './light-search-styles';
 import { LightSearchFC } from './light-search-types';

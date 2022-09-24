@@ -1,4 +1,4 @@
-import { Nil } from '../../../@types/globals';
+import { Nil } from '@src/@types/globals';
 
 type Props = {
   condition: boolean | Nil;
