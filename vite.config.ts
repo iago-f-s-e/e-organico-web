@@ -1,18 +1,19 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import alias from '@rollup/plugin-alias';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 const projectRootDir = resolve(__dirname);
 
-// https://vitejs.dev/config/
 export default defineConfig((context) => {
+  const env = loadEnv(context.mode, process.cwd(), 'APP_');
+
   switch (context.mode) {
     default:
       return {
         envPrefix: 'APP_',
         server: {
-          port: 3000,
+          port: Number(env.APP_PORT),
         },
         build: {
           outDir: 'dist',
