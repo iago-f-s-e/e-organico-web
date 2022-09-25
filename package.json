@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "start:prod": "vite --mode production",
+    "start:staging": "vite --mode staging",
+    "start:dev": "vite --mode development",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "yarn tsc --noEmit",
