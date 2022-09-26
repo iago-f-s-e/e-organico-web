@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-import { PendingProducer } from '../../services/app';
-import * as Cp from '../../components';
-import * as Ct from '../../containers';
+import * as Cp from '@src/components';
+import { PendingProducer } from '@src/services/app';
+import * as Ct from '@src/containers';
+import { tabs } from '@src/constants';
+import { useAppFetch } from '@src/hooks';
+import { endpoints } from '@src/services/endpoints';
+import { useAppPush } from '@src/hooks/use-app-push';
 import * as S from './pending-producers-styles';
-import { tabs } from '../../constants';
-import { useAppFetch } from '../../hooks';
-import { endpoints } from '../../services/endpoints';
-import { useAppPush } from '../../hooks/use-app-push';
-
-import p from './data';
 
 export const PendingProducers = (): JSX.Element => {
   const [tabSelected, setTabSelected] = useState<string>(tabs.PENDING_PRODUCERS.FIRST);
@@ -42,10 +40,10 @@ export const PendingProducers = (): JSX.Element => {
             inputSearchPlaceholder: 'Digite o nome de um produtor',
             content: (
               <Cp.RenderOrEmpty
-                toCheck={p}
+                toCheck={[]}
                 render={() => (
                   <Ct.ListPendingProducers
-                    producers={p}
+                    producers={[]}
                     onAccept={(id) => handleAcceptPendingProducer(id)}
                   />
                 )}
