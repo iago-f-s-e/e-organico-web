@@ -14,6 +14,7 @@ export default defineConfig((context) => {
         envPrefix: 'APP_',
         server: {
           port: Number(env.APP_PORT),
+          host: '0.0.0.0',
         },
         build: {
           outDir: 'dist',
