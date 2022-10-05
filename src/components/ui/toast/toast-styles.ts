@@ -83,6 +83,7 @@ export const Content = styled.div`
   align-items: center;
   width: ${pxToRem(470)};
   height: 100%;
+  padding: 0 ${pxToRem(10)};
 
   &.error-toast-content {
     background: #ffd4d0;
@@ -103,6 +104,7 @@ export const Content = styled.div`
 
 export const Message = styled.p`
   flex: 1;
+  overflow-wrap: break-word;
 
   font-weight: ${fontSystem.weight.semibold};
   font-size: ${fontSystem.size.rem_large};
