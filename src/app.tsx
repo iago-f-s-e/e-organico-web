@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Toast } from './components';
 
-import { PendingProducers } from './pages';
+import { Producers } from './pages';
 import { GlobalStyle } from './styles';
 
 export const App = (): JSX.Element => {
@@ -10,7 +10,7 @@ export const App = (): JSX.Element => {
       <GlobalStyle />
       <Toast />
       <Header />
-      <PendingProducers />
+      <Producers />
     </div>
   );
 };

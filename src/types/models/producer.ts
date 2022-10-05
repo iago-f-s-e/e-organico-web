@@ -1,4 +1,4 @@
-import { Address } from '../address-service';
+import { Address } from './address';
 
 type CertificationType = 'IN CONVERSION' | 'AUDIT' | 'OCS' | 'SPG';
 

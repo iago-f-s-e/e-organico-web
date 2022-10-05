@@ -1,4 +1,4 @@
-import { Address } from '../services/app/address-service';
+import { Address } from '@src/types/models';
 import { capitalize } from './capitalize';
 import { handleInputMask } from './masks';
 

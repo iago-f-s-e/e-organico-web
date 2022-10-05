@@ -1,7 +1,7 @@
 import React from 'react';
 
 import * as C from '@src/components';
-import { useExpandList } from '@src/hooks/use-expand-list';
+import { useExpandList } from '@src/hooks';
 import { formatFullAddress, handleInputMask } from '@src/utils';
 import { ApproveOrDecline } from '../approve-or-decline';
 import { ListPendingProducersProps } from './list-pending-producers-types';

@@ -1,6 +1,6 @@
-import { PendingProducer } from '@src/services/app';
+import { GetPendingProducers } from '@src/types';
 
 export type ListPendingProducersProps = {
-  producers: PendingProducer[];
+  producers: GetPendingProducers;
   onAccept: (id: string) => void;
 };
